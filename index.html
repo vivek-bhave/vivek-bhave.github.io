@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vivek Bhave | Portfolio</title>
+  <style>
+    :root{
+      --bg:#0b0f14;
+      --card:#121826;
+      --text:#e6edf3;
+      --muted:#9aa4b2;
+      --accent:#4aa3ff;
+      --border: rgba(255,255,255,0.08);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    a{color:var(--accent); text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 28px 18px;
+    }
+    .hero{
+      display:flex;
+      gap:22px;
+      align-items:center;
+      padding: 22px;
+      border: 1px solid var(--border);
+      background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.01));
+      border-radius: 18px;
+    }
+    .photo{
+      width:110px;
+      height:110px;
+      border-radius: 18px;
+      border: 1px solid var(--border);
+      object-fit: cover;
+      background:#111;
+      flex-shrink:0;
+    }
+    .hero h1{
+      margin:0;
+      font-size: 28px;
+      letter-spacing: 0.2px;
+    }
+    .subtitle{
+      margin: 6px 0 0 0;
+      color: var(--muted);
+      font-size: 15px;
+    }
+    .buttons{
+      margin-top: 12px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+    }
+    .btn{
+      display:inline-block;
+      padding: 10px 14px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.03);
+      color: var(--text);
+      font-weight: 600;
+      font-size: 14px;
+    }
+    .btn.primary{
+      background: rgba(74,163,255,0.15);
+      border-color: rgba(74,163,255,0.35);
+    }
+
+    h2{
+      margin: 26px 0 12px 0;
+      font-size: 18px;
+      color: var(--text);
+      letter-spacing: 0.2px;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(2, minmax(0,1fr));
+      gap: 14px;
+    }
+    @media(max-width: 760px){
+      .hero{flex-direction:column; text-align:center}
+      .grid{grid-template-columns: 1fr}
+      .buttons{justify-content:center}
+    }
+
+    .card{
+      padding: 16px;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.02);
+    }
+    .card h3{
+      margin:0 0 6px 0;
+      font-size: 16px;
+    }
+    .meta{
+      color: var(--muted);
+      font-size: 13px;
+      margin: 0 0 10px 0;
+    }
+    ul{
+      margin: 0;
+      padding-left: 18px;
+      color: var(--text);
+    }
+    li{margin-bottom:6px}
+    .footer{
+      margin-top: 28px;
+      padding-top: 14px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 13px;
+      text-align:center;
+    }
+    .tag{
+      display:inline-block;
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.02);
+      color: var(--muted);
+      font-size: 12px;
+      margin-right: 6px;
+      margin-top: 6px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <!-- HERO -->
+    <div class="hero">
+      <!-- Replace profile.jpg with your photo file name -->
+      <img class="photo" src="profile.png" alt="Vivek Bhave Photo" />
+
+      <div>
+        <h1>Vivek Chandrakant Bhave</h1>
+        <p class="subtitle">
+          MS (AI &amp; Data Science) @ ABV-IIITM Gwalior • Data Science • Machine Learning • NLP
+        </p>
+
+        <div class="buttons">
+          <!-- Replace resume.pdf with your resume file name -->
+          <a class="btn primary" href="resume.pdf" target="_blank">📄 Resume</a>
+
+          <a class="btn" href="https://github.com/vivek-bhave" target="_blank">GitHub</a>
+          <a class="btn" href="https://www.linkedin.com/in/vivek-bhave-1527b8309/" target="_blank">LinkedIn</a>
+          <a class="btn" href="mailto:bhavevivek7@gmail.com">Email</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABOUT -->
+    <h2>About</h2>
+    <div class="card">
+      <p style="margin:0; color: var(--muted);">
+        I am an MS student in Artificial Intelligence &amp; Data Science at ABV-IIITM Gwalior.
+        I enjoy building data-driven projects, exploring NLP and embeddings, and strengthening my problem-solving
+        skills through DSA in C++.
+      </p>
+    </div>
+
+    <!-- PROJECTS -->
+    <h2>Projects</h2>
+    <div class="grid">
+
+      <div class="card">
+        <h3>Human-Relatedness Embedding</h3>
+        <p class="meta">Python • GloVe • SimLex-999 • MEN • Pearson Correlation • R²</p>
+        <ul>
+          <li>Compared word-embedding similarity with human semantic judgments.</li>
+          <li>Tested GloVe embeddings (50D–300D) using cosine similarity.</li>
+          <li>Best MEN result: <b>Correlation = 0.74</b>, <b>R² = 0.55</b> (300D).</li>
+        </ul>
+        <div style="margin-top:10px;">
+          <a href="https://github.com/vivek-bhave/Human-Relatedness-embedding" target="_blank">🔗 View on GitHub</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Insurance Data Analysis &amp; ML Modeling</h3>
+        <p class="meta">Python • Pandas • Scikit-learn • EDA • Regression • Classification</p>
+        <ul>
+          <li>Performed EDA to study how age, BMI, smoker status, and region affect charges.</li>
+          <li>Built baseline ML models with preprocessing and encoding.</li>
+          <li>Linear Regression: <b>R² = 0.784</b> • Logistic Regression: <b>Accuracy = 0.966</b></li>
+        </ul>
+        <div style="margin-top:10px;">
+          <a href="https://github.com/vivek-bhave/Insurance-Data-Analysis" target="_blank">🔗 View on GitHub</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- SKILLS -->
+    <h2>Skills</h2>
+    <div class="card">
+      <span class="tag">Python</span>
+      <span class="tag">SQL</span>
+      <span class="tag">C</span>
+      <span class="tag">C++</span>
+      <span class="tag">NumPy</span>
+      <span class="tag">Pandas</span>
+      <span class="tag">Matplotlib</span>
+      <span class="tag">Seaborn</span>
+      <span class="tag">Scikit-learn</span>
+      <span class="tag">EDA</span>
+      <span class="tag">Feature Engineering</span>
+      <span class="tag">Regression</span>
+      <span class="tag">Classification</span>
+      <span class="tag">Git</span>
+      <span class="tag">GitHub</span>
+      <span class="tag">Jupyter</span>
+      <span class="tag">VS Code</span>
+    </div>
+
+    <!-- DSA -->
+    <h2>DSA Journey</h2>
+    <div class="card">
+      <ul>
+        <li>Solved 32 DSA problems on LeetCode (Arrays, Strings, Sliding Window, Prefix Sum, Recursion).</li>
+        <li>
+          Public DSA learning repo:
+          <a href="https://github.com/vivek-bhave/DSA-Learning-Cpp" target="_blank">
+            DSA-Learning-Cpp
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="footer">
+      © 2026 Vivek Chandrakant Bhave • Built using GitHub Pages
+    </div>
+
+  </div>
+</body>
+</html>
