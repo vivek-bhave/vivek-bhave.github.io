@@ -179,15 +179,32 @@
     <div class="grid">
       <div class="card">
   <h3>IMDB Sentiment Analysis Pipeline</h3>
-  <p class="meta">Python • TF-IDF • Scikit-learn • NLP • Model Evaluation</p>
+  <p class="meta">Python • TF-IDF • Scikit-learn • NLP • Model Comparison • Failure Analysis</p>
+
   <ul>
-    <li>Built an end-to-end sentiment analysis pipeline on 40k IMDB reviews.</li>
-    <li>Tuned TF-IDF parameters to reduce noise and improve classification performance.</li>
-    <li>Compared models: <b>Logistic 0.93</b>, <b>SVM 0.89</b>, <b>Naive Bayes 0.87</b>, <b>Random Forest 0.85</b>.</li>
-    <li>Evaluated using precision, recall, F1-score and confusion matrix instead of accuracy only.</li>
-    <li>Connected model metrics to real-world decision reliability (e.g., detecting negative reviews for feedback analysis).</li>
-    <li>Failure analysis of misclassified reviews in progress.</li>
+    <li>Built an end-to-end sentiment analysis pipeline on 40k IMDB reviews using TF-IDF and classical ML models.</li>
+
+    <li>Tuned TF-IDF parameters (min_df, max_df, max_features, n-grams) to reduce noise and improve performance.</li>
+
+    <li>Compared multiple models:
+      <b>Logistic Regression 0.89</b>,
+      <b>SVM 0.89</b>,
+      <b>Naive Bayes 0.87</b>,
+      <b>Random Forest 0.85</b>,
+      <b>Decision Tree 0.73</b>.
+    </li>
+
+    <li>Performed detailed metric analysis using precision, recall, F1-score and confusion matrix instead of accuracy only.</li>
+
+    <li>Conducted failure analysis of misclassified reviews including mixed sentiment, sarcasm, and long reviews.</li>
+
+    <li>Analyzed limitations of binary sentiment classification and showed how human emotions cannot always be represented as positive / negative.</li>
+
+    <li>Explained why linear models perform better than tree-based models for high-dimensional TF-IDF text features.</li>
+
+    <li>Designed with real-world use case in mind such as large-scale review monitoring and audience feedback analysis.</li>
   </ul>
+
   <div style="margin-top:10px;">
     <a href="https://github.com/vivek-bhave/imdb-sentiment-analysis-pipeline" target="_blank">
       🔗 View on GitHub
